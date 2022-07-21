@@ -1,6 +1,9 @@
 package request
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"github.com/mxmCherry/openrtb/v15/openrtb2"
+)
 
 // 4.2 Asset Object
 //
@@ -79,7 +82,7 @@ type Asset struct {
 	//   Note that in-stream (ie preroll, etc) video ads are not part of Native.
 	//   Native ads may contain a video as the ad creative itself.
 	//   Each asset object may contain only one of title, img, data or video.
-	Video *Video `json:"video,omitempty"`
+	Video *openrtb2.Video `json:"video,omitempty"`
 
 	// Field:
 	//   data
